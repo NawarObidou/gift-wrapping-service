@@ -7,3 +7,6 @@ Variables that can affect the price are:
   2. Pattern 1 (default price) or pattern 2 (higher price)
   3. The addition of a gift tag (default price + amount per character)
   4. Whether the customer wants a bow or not.
+
+
+![image](https://user-images.githubusercontent.com/90908877/203331038-2a401a83-2ea1-496c-99ea-fb925b39ac47.png)
