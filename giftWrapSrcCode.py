@@ -97,9 +97,6 @@ def pattern1():
     c.create_polygon(90, 150, 120, 120, 150, 120, 180, 150, 150, 180, 120, 180, fill=colourVariable.get(), outline="black")
     c.create_polygon(180, 150, 210, 120, 240, 120, 270, 150, 240, 180, 210, 180, fill=colourVariable.get(), outline="black")
     c.create_polygon(270, 150, 300, 120, 330, 30, 360, 150, 330, 120, 300, 180, fill=colourVariable.get(), outline="black")
-    # I took into account the improvement that I mentioned in my last submission and refined the code in this section to
-    # to make it cleaner
-    # I have also decided to not assign the polygons to any variables since it is not necessary
 
 def pattern2():
     c.create_rectangle(0, 0, 270, 180, fill='white', outline='white')
@@ -213,7 +210,9 @@ def calculator():
             errorLabel.config(text='', bg='cornsilk')
             return surfaceA
         except ValueError:
-            errorLabel.config(text="""Only enter whole numbers.
+            if heightE.get() == '':
+                errorLabel.config(text="""PLease input dimensions""", bg='red')
+            else: errorLabel.config(text="""Only enter whole numbers.
         (No letters or decimals)""", bg='red')
     elif shapeVariable.get() == 2:
         try:
